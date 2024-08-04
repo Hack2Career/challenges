@@ -1,0 +1,32 @@
+Python:
+
+class Solution:
+    def findKthPositive(self, arr: List[int], k: int) -> int:
+        # Loop through each element in the array
+        for i in range(len(arr)):
+            # If the current element is less than or equal to k,
+            # it means this element is one of the missing numbers
+            if arr[i] <= k:
+                # Increase k since we need to find the k-th missing positive number
+                k += 1
+        # After the loop, return k, which will be the k-th missing positive number
+        return k
+
+Java:
+
+class Solution {
+    public int findKthPositive(int[] arr, int k) {
+        // Loop through each element in the array
+        for (int i = 0; i < arr.length; i++) {
+            // If the current element is less than or equal to k,
+            // it means this element is one of the missing numbers
+            if (arr[i] <= k) {
+                // Increase k since we need to find the k-th missing positive number
+                k++;
+            }
+        }
+        // After the loop, return k, which will be the k-th missing positive number
+        return k;
+    }
+}
+
